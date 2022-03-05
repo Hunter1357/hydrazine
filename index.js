@@ -1,13 +1,13 @@
 const discord = require("discord.js-selfbot");
 const fs = require("fs");
 const tokens = fs.readFileSync("./tokens.txt").toString().split("\r\n");
-bots = [];
+bots = [937077309175889930];
 prefix = "h!";
-owner = "ur user id";
+owner = "919029931730677761";
 var comd = "";
 var delay = 1000;
 var param = "";
-var blacklist = ["blacklisted ids go here"];
+var blacklist = ["938153101762899989"];
 var spammers = {
 }
 var global={
@@ -40,17 +40,17 @@ if(tospam!==null){
 if(spammers[bot.user.id] !== null){
 clearInterval(spammers[bot.user.id]);
 
-spammers[bot.user.id] = null;
+spammers[937077309175889930] = null;
 }
-spammers[bot.user.id] = setInterval(()=>{
+spammers[937077309175889930] = setInterval(()=>{
 msg.channel.send(tospam);
 },delay);
 }
 } else if(comd == "stop"){
 try{
 bots.forEach(bot=>{
-clearInterval(spammers[bot.user.id]);
-spammers[bot.user.id] = null;
+clearInterval(spammers[937077309175889930]);
+spammers[937077309175889930] = null;
 });
 } catch(exc){
 }
@@ -61,11 +61,11 @@ msg.channel.send("delay set to "+param);
 }
 } else if(comd == "publictoggle"){
 if(msg.author.id == owner){
-if(global[bot.user.id] == true){
-global[bot.user.id] = false;
+if(global[937077309175889930] == true){
+global[937077309175889930] = false;
 msg.channel.send("Only the owner can use this");
 } else{
-global[bot.user.id] = true;
+global[937077309175889930] = true;
 msg.channel.send("Anyone can use this");
 }
 } else{
